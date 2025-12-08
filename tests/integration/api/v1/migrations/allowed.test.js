@@ -11,6 +11,5 @@ test("Json's header must have allowed methods GET and POST", async () => {
     method: "PUT",
   });
 
-  const responseBody = await response.json();
   expect(response.headers.get("Allow")).toBe("GET, POST");
 });
